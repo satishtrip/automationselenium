@@ -23,7 +23,7 @@ pwd_elem = driver.find_element_by_name("session_password")
 print(pwd_elem.is_displayed())
 print(pwd_elem.is_enabled())
 
-user_elem.send_keys("") #usn
+user_elem.send_keys("satish512tripathi@gmail.com") #usn
 
 pwd_elem.send_keys("")  # pwd
 
@@ -33,7 +33,20 @@ pwd_elem.send_keys("")  # pwd
 
 
 pwd_elem.submit()
+driver.implicitly_wait(3)
+driver.find_element_by_id("").click()
+# clicks on jobs icon
 
-driver.find_element_by_id("ember26").click()   # clicks on jobs icon
 
-driver.find_element(By.ID,"jobs-search-box-location-id-ember991").send_keys("Bangalore")
+time.sleep(2)
+
+
+driver.find_element_by_id("ember687").click()
+
+driver.find_element_by_id("ember687").send_keys("Bengaluru")  # search job in bangalore
+
+
+
+
+
+#driver.find_element(By.XPATH,"//*[@id='ember548']/div[2]/button").click()
